@@ -1,64 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Yohasida - Moda Femenina</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #fefefe;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fff0f5;
       color: #333;
     }
     header {
-      background-color: #f48fb1;
-      color: white;
-      padding: 20px;
+      background: linear-gradient(to right, #ec407a, #f48fb1);
+      padding: 50px 20px;
       text-align: center;
+      color: white;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
     }
     nav {
       background-color: #f06292;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      padding: 10px;
+      flex-wrap: wrap;
+      padding: 12px;
     }
     nav a {
       color: white;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffeef4;
+    }
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2em;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
     }
     .container {
-      padding: 20px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
     }
     .product {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 10px;
-      text-align: center;
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+      transition: transform 0.3s ease;
+    }
+    .product:hover {
+      transform: translateY(-5px);
     }
     .product img {
       width: 100%;
-      height: auto;
-      border-radius: 8px;
+      height: 300px;
+      object-fit: cover;
+    }
+    .product-details {
+      padding: 15px;
+      text-align: center;
+    }
+    .product-details h3 {
+      margin: 10px 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2em;
+    }
+    .product-details p {
+      color: #d81b60;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .btn {
+      background-color: #ec407a;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+      font-size: 0.95em;
+    }
+    .btn:hover {
+      background-color: #d81b60;
     }
     footer {
-      background-color: #f48fb1;
+      background-color: #f06292;
       color: white;
       text-align: center;
-      padding: 15px;
-      margin-top: 20px;
+      padding: 20px;
+      font-size: 0.95em;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Yohasida</h1>
-    <p>Moda femenina con estilo y elegancia</p>
+    <p>Moda femenina con estilo, elegancia y personalidad</p>
   </header>
 
   <nav>
@@ -68,26 +135,39 @@
     <a href="#">Contacto</a>
   </nav>
 
+  <div class="hero">
+    Nueva colección Primavera-Verano
+  </div>
+
   <main class="container">
     <div class="product">
-      <img src="https://via.placeholder.com/200x250.png?text=Vestido+Rosa" alt="Vestido Rosa">
-      <h3>Vestido Rosa Elegante</h3>
-      <p>$45.00</p>
+      <img src="https://images.unsplash.com/photo-1618354691373-d8512ec9c185?auto=format&fit=crop&w=400&q=80" alt="Vestido Rosa">
+      <div class="product-details">
+        <h3>Vestido Rosa Elegante</h3>
+        <p>$45.00</p>
+        <button class="btn">Comprar</button>
+      </div>
     </div>
     <div class="product">
-      <img src="https://via.placeholder.com/200x250.png?text=Blusa+Blanca" alt="Blusa Blanca">
-      <h3>Blusa Blanca Casual</h3>
-      <p>$25.00</p>
+      <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=400&q=80" alt="Blusa Blanca">
+      <div class="product-details">
+        <h3>Blusa Blanca Casual</h3>
+        <p>$25.00</p>
+        <button class="btn">Comprar</button>
+      </div>
     </div>
     <div class="product">
-      <img src="https://via.placeholder.com/200x250.png?text=Falda+Negra" alt="Falda Negra">
-      <h3>Falda Negra Formal</h3>
-      <p>$35.00</p>
+      <img src="https://images.unsplash.com/photo-1593032457869-62a1e2b9a870?auto=format&fit=crop&w=400&q=80" alt="Falda Negra">
+      <div class="product-details">
+        <h3>Falda Negra Formal</h3>
+        <p>$35.00</p>
+        <button class="btn">Comprar</button>
+      </div>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Yohasida - Todos los derechos reservados</p>
+    <p>&copy; 2025 Yohasida - Todos los derechos reservados | Síguenos en redes sociales</p>
   </footer>
 </body>
 </html>
